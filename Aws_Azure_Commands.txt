@@ -1,0 +1,282 @@
+COMMANDS
+
+1) ipconfig                       - To Show the Machine Ip Address
+2) cls                            - To clear the screen
+3) cd                             - Go to particular path (ex: cd Downlods),CD-Change Directory
+4) chmod 400 aws_batch_21.pem     - this command is used for ssh
+5) ssh -i "aws_batch_21.pem" ubuntu@ec2-13-53-83-8.eu-north-1.compute.amazonaws.com  - For Linux server
+6) clear                          - To clear the console of GitBash
+7) pwd                            - (present working directory) used for path of the file or locaion of file
+8) cd ..                          - One directory back 
+9) cd .                           - Same directory/folder
+11) cd ~                          - home directory
+12) ls                            - Listing of files(it shows list of folder,files)
+13) mkdir                         - Used to create folder
+14) cd /                          - Top level Root Directory
+15) id                            - To show with which user you logged in
+16) sudo -i                       - To login with root
+17) sudo su                       - To login with root
+18) exit                          - To Logout or exit the user
+19) history                       - View the overall history of commands that you used
+20) rmdir                         - Remove Directory
+21) mkdir batch_{1,2,3,4,5}       - It makes five folders like batch_1,batch_2,batch_3,batch_4,batch_5
+22) rmdir batch_*                 - Multiple Folder deleted (batch_1,batch_2,batch_3,batch_4,batch_5)
+23) ls -l                         - Detailed information of file/folder like date,time,user
+24) ls -lrt                       - rt-reverse order , recently updated file is shown in last number...l-Long listing,r-recursive,t-time
+25) date                          - Shows date , Time show in UTC
+26) touch file_Name          - To create a empty file
+27) rm file_Name             - To remove file only
+28) rm -rf  file_Name        - remove File and Folder (Both are deleted if borh name is same),recursively & forcefully
+29) cp                       - copy (cp source file address destination address)
+30) cp filename folder name/  - copy file in folder
+31) vim file_name             - Adding data in file
+32) Shift + i                 - For inserting the data in file
+33) ESC                       - For uotside the Data
+34) Shift + :wq!              - To save the data in file
+35) cat file_name             - It shows the data of file on console
+36) cat auth.log              - for detailed information of file
+37) more auth.log             - it shows the file information/read in % (first its shows 30 ,44 then when you enter it shows more)
+38) less auth.log             -  To read the file
+39) ls -a                     - Shows the hidden files as well non-hidden files
+40) touch .file_name          - it save the hidden file 
+41) ls -alrt                  - shows the hidden file data + non hidden file data
+42) ls -alrth                 - h= Human readable format (shows the hidden file data + non hidden file data in human readable format)
+43) mv file_name(move) folder_name(location)  - used for to move the file in folder, (mv source_file dest_location)
+44) mv file_name(rename) name(new name)       - To rename the file, (mv old_file new_file)
+45) mv file_name Folder-name/New_name(Remane)   - Using this command we can perform both move and rename the file 
+46) cd var/                                   - Open var
+47) cd log/                                   - to open log folder
+48) cat auth.log                              - Detailed information about auth.log
+49) tail auth.log                             - It displays the last part of the file
+50) head auth.log                             - It displayes the First part of the file (Starting Part)
+51) tail -10(the number) auth.log             - _10 no of files shows
+52) head -08(only 8 file) auth.log            - according to Number the First files are shows like only 8 file will be show
+53) uptime                                    - System start time shows 
+54) :set nu                                   - For numbering the file content
+55) :/text                                    - Using /text the curcle is move automaticaly to this text
+56) line-dd                                   - curcle is at starting of the line then you type dd for delete hole line
+57) :q!                                       - To quit without save the data
+58) useradd user_name                         - add new user in linux system
+59) passwd user_name                          - set the password to the new user
+60) su user_name                              - To login as a new created user
+61) cat /etc/passwd                           - All user details
+62) groupadd group_name                       - To add group
+63) usermod -g group-Id(1003) user_name      - Move user in another group
+64) userdel user_name                         - Delete the user from group
+65) cat passwd                                - Check the user is deleted or not
+66) man pwd                                   - Shows manual 
+67) man ls                                    - Shows manual of ls 
+68)  df                                       - Shows the disk space in the file system
+69) df -h                                     - Shows the disk space in human readable format
+70) du                                        - it shows how much space a file/Directory takes
+71) du -h                                     - it shows how much space a file/Directory in human readable format like kb,mg,gb format
+72) top                                       - Display the list of running process and how much cpu is used
+73) q                                         - exit the top command
+74) yes >/dev/null &                          - Create artificial load on system 
+75) clt+z                                     - exit the top command
+76) kill -9 1142(process Id)                  - It is used to killed the process 
+77) ps -aux                                   - get the detailed information of all process or sepcific process
+78) ps ux                                     - get the detailed information of pid(process identification number)
+79) find . -name "*.txt"                      - Find a text file
+80) find /var/ -name "*.txt"                  - For particular location
+81) locate file_name                          - Find a file in the database
+82) sudo yum check-update                     - It check the upadate is available for package or not
+83) yum install vsftpd                        - install package in amazonLinux m/c
+84) yum remove vsftpd -y                      - to remove the package
+85) yum list all                              - list of all packges 
+86) yum info vsftpd                           - detailed information about a specific packges
+87) git --version                             - check the version / software is installed or not
+88) yum install git -y                        - For install git software
+89) yum info git                              - Shows the information of git
+90) yum upgrade -y                            - To upgrade the system
+91) yum repolist all                          - It shows the all repository list/info
+92) systemctl status nginx                    - It shows the nginx package is active or inactive
+93) systemctl start nginx                     - to start the nginx pckage
+94) apt-get update -y                         - Upgrade the system with latest release
+95) apt-get check                             - It check the updates
+96) apt install vsftpd -y                     - To install package in ubuntu 
+97) apt remove vsftpd -y                      - To remove package
+98) apt info vsftpd                           - Check the version
+99) man apt                                   - command information
+100) apt list                                 - Shows the combined list of packages
+101) apt list --installed                     - shows installed packges list
+102) apt install nginx -y                     - install nginx package
+103) cd /usr/share/nginx/                     - location of html file in nginx package
+104) /var/www/html/index.html                 - You need to first delete the index file then you have to edit new one for Ubuntu
+105) systemctl start (service_name)           - to start service
+106) systemctl status (service_name)          - o check the status
+107) systemctl stop (service_name)            - to stop the service
+108) systemctl restart (service_name)         - to start & stop the service
+109) cat auth.log | grep "33:23"(time)        - shows file according to time
+110) cat auth.log | grep "root"(user)         - shows the file according to user
+111) cat auth.log | grep "root"(user) | grep "03:22"(time)   - we can use grep on grep
+112) cat file_name | grep world               - Find a specific word in file
+113) cat file_name | grep -i word             - This command is used for case Sensetive/Insensetive word 
+114) cut -d ' ' -f2 file_name                 - use for the show file 2nd fild word only(ex: hii its Deepak , show only its )
+115) cut -b 4(byte number) file_name          - only show the 4 charactor of file (ex: deepak , i am , Kolhapur: op=a , ,h)
+116) cut -c 4,5(characters) file_name         - only show the 4,5 character of file
+117) cut -c 4-5 file_name                     - show only 4 to 7 words
+118) comm file_name1 file_name2               - Show common world in file1 and file2
+119) echo (world)                             - after echo whatever you type this will bw print
+120) echo class7 class9 | sed 's/class/batch/g'   - change the file name (ex: class7 class9 repleced by batch7 batch9)
+121) cat file_name | sed '/(word)/d'          - it will delete a specific line where the word is present
+122) sed '3s(No of Line)/Red(Change word)/Blue(Change Word to Blue) - 3s(Line no) change the word Red to Blue In line no 3
+123) sed '2s/is/was/' file-name               - change the 2nd line is converted into was
+124) sed 's/is/was/g' file-name               - change the is to was in overall file
+125) sed -i 's/is/was/g' file-name            - you can save the changes permenantely in file
+126) wc file_name                             - shows no of line,no of words, no of letters
+127) wc -l file_name                          - shows only lines
+128) awk '{print $0}' file_name               - shows the inforation of file like cat command
+129) awk '{print NR,$0}' file_name            - shows the information with count number
+130) awk '{print $1}' file_name               - Print only specific 1st coloumn data
+131) awk '{print $2}' file_name               - Print only specific 2nd coloumn data
+132) awk '{print $1,$4}' file_name            - Print one or more coloumn data
+133) awk '{print $NF}' file_name              - Print only last fild(last coloumn) coloumn data
+134) awk '{print $1}' file-name | head-1      - Print Specific Line of coloumn
+133) awk '/a(last_word)$/' file_name          - Print the data who have leatter a at the end
+134) wget file_link                           - Downlode the file,software from using this command
+135) cat /etc/os-release(filepath)            - Shows the information of OS
+136) uname -r                                 - Shows the kernal information
+137) mail -s "Subject" <recipient Address>    - Send the mail
+138) ifconfig                                 - Shows ip address
+139) hostname -i                              - Only shows ip address
+140) ifconfig eth0                            - ip address
+141) traceroute file-name                     - Helpful for diagnosing network issues
+142) apt install inetutils-traceroute         - Install Traceroute utility on system
+143) apt install traceroute                   - Install Traceroute utility on system
+144) tracepath file-name                      - Is shows where your network is week
+145) ping website_name                        - Shows the internet connectivity
+146) netstat -a                               - shows the network statistics
+147) dig website_name                         - Shows Domain information
+148) nslookup website_name                    - Shows Domain information
+149) ll                                       - long listing
+150) chmod 777(number) folder-name            - change the permission
+151) chown ubuntu(user-Name) folder_name      - change owner
+152) scp -i "13may.pem"(file) YoungMinds.pdf(copy_file) ubuntu@54.198.177.29:/temp/     - File transfer from local to server
+153) ln file_name New-File_Name               - HardLink the file (replication/shortcut)
+154) ln -s originalfile new-file-name         - For Softlink
+155) tar -czvf file_name.tar.gz file-name     - Achrive the file
+156) zcat file_name(archived file)            - shows the information of file without unzip the file
+157) init 0                                   - Stop the Virtul Machine
+158) init 6                                   - Restart the VM
+159) rsync                                    - Similar as SCP
+160) free                                     - Memory
+161) lsof                                     - List of open file
+162) lsof /var/ | grep deleted                - print all deleted files which claming disk space
+163) git clone url_of_repo                    - clone the file
+164) #!/bin/bash                              - Interpeter (exicute one by one line), Start the file from this
+165) ./script_name.sh                         - Execute the shells script
+166) sh script_name.sh                        - Execute the shells script
+165) bash script_name.sh                      - Execute the shells script
+166) chmod 755 -R folder-name                 - Give the permission read , write ,execute
+167) echo $PATH                               - Shows the variable path
+168) echo $?                                  - Shows the o/p 0 (the last command is successfull)
+169) apt install maven -y                     - Maven install
+170) mvn -v                                   - Maven version check
+171) aws configure                            - Aws cli for windows
+172) aws s3 ls                                - Shows available buckets
+173) aws s3 mb s3://batch21-s3-clibucket      - create s3 bucket using cli..mb(make bucket) 
+174) aws s3 sync . s3://Bucket_name           - uplode file in bucket
+175) aws s3 rb s3://bucket_name               - remove bucket
+176) aws s3 rm s3://Bucket_name --recursive   - remove objects
+177) lsblk                                    - shows the status of volume
+176) fdisk -l                                 - disk information
+177) mkfs.xfs /dev/xvdf1                      - partetion
+178) mount /dev/xvdf1 /tmp/images             - mount the partetion to a directory
+179) .acx                                     - is not a readable. for readable we have to convert into .acx to .lst
+180) ~/.aws /credentials                      - Shows credentials
+181) aws configure set StoreAs Default        -  Set Default
+----------------------------------------------------------------------------------------------------------------------
+VS-CODE
+182) git clone Repositary Url                 - Clone/Copy the code from remote repo to local repo(vs code)
+183) ls                                       - Shows the folder clone folder
+184) git status                               - Shows the file status like modified
+185) git add.                                 - . use for adding all file which are modified
+186) git commit -m " i am commiting"          - for commiting the files / adding files in repo
+187) git push remote repo url                 - code push from local repo to remote repo
+----------------------------------------------------------------------------------------------------------------------
+GIT Bash
+188) git config --global user.email "bob@example.com"  - Access by using mail id
+189) git config user.name 'Mahmoud Zalt'               - Access by using user name(AWS console)
+----------------------------------------------------------------------------------------------------------------------
+190) git branch                                        - Shows the Braches
+191) git checkout -b INC24496596(name)                 - Switch to name branch/ create branch
+192) git switch branchname                             - switch from one to another branch
+193) git log --oneline                                 - Shows what we done in file
+194) git init                                          - Create a new repository
+195) git stash                                         - Save the task and again start when you do
+196) git stash apply
+197) git stash list
+198) git stash show 
+199) git reset --soft                         - Uncommit Changes (staging/index)
+200) git reset --mixed                        - Uncommit + unsatge (working area)
+201) git reset --hard                         - Uncommit + Unstage + Delete Changes 
+202) git log                                  - Commit Information
+203) git revert commit id                     - Undoing changes
+204) git tag (tag id/name)                    - Allows you to lable your commit
+205) git pull remote repo url                 - Changes are copy not need to clone again
+206) git featch                               - Shows the changes 
+207) git cherry -pick id                      - You can pick specific commit and merge it
+208) git hooks                                - This is a script that runs automaticly
+209) java --version                           - check java 
+210) sudo apt update                          - update
+211) sudo apt install openjdk-11-jdk -y       - install jdk 11
+212)sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+213) echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+214) sudo apt-get install jenkins             - Install Jenkins
+215) jenkins --version                        - check version
+216) mvn --version                            - check version
+217) apt install maven -y                     - install maven
+218) apt-get install pythan3-minimal          - install pythan for ansible
+219) apt-get install software-properties-common  - For set repo
+220) apt-get install ansible                  - install ansible
+221)  ansible --version                       - Ansible version
+222) ssh-keygen -t rsa                        - Genrate key
+223) /root/. ssh                              - location of authorized key
+224) sudo apt-add-repository ppa:ansible/ansible  - Add repo
+223) ansible -m ping Ip-address               - Ping Pong , To check connectivity
+224) ansible-playbook-name --syntax-check filename    - Check syntax
+225) ansible-playbook(playbook name) file.yml(file-name)   - Run the play book
+226) ansible -m ping all                     - Check connection of all node
+227) ansible all -m copy -a "src=/etc/ansible/hosts dest=/var"    -copy source file to other nodes
+228) ansible all -m shell -a "free -m"   - using master server you can check other servers memory space
+229) ansible all -m shell -a "ls -lrt /" - using master server you can check other information like date/time 
+230) ansible all -m shell -a "df -h"     - using master server you can check disk space
+231) ansible all -m apt -a "name=git state=latest" --become   - using master server you can install git on multiple server(apt for ubuntu)
+232) ansible all -m yum -a "name=git state=latest" --become   - using master server you can install git on multiple server(apt for amazon)
+233) ansible all -m shell -a "git --version"     - Shows multiple server git version by using master server
+234) ansible-config init --disabled > ansible.cfg   - Shows the all information of config file 
+235) cat ansible.cfg | grep host_key_checking        - check the host key status
+236) mkdir -p roles/git/tasks                        - For creating roles
+237) apt install tree                                - install strecture access command
+238) tree                                            - Shows role strecture
+========================================================================================================================================================
+***Terraform***
+239) terraform init                    - Featch the nessasary files
+240) terraform plan                    - Show all parameter
+241) terraform apply                   - For execute plan
+242) aws configure list                - Shows access key /Secreate key
+243) terraform destroy                 - delete the created resources
+245) terraform validate                - check configuration is correct or not
+246) terraform fmt                     - code format arranged in proper manner
+
+=========================================================================================================================================================
+***Docker***
+247) apt install docker.io -y          - Install docker
+248) docker --version                  - check version
+249) docker images                     - to check available docker images on your vm
+250) docker ps -a                      - Shows the container
+251) docker pull image name            - to pull image from registory to docker host
+252) docker search (server-name)       - For searching server
+253) docker run -it --name cont-1 ubuntu(name) /bin/bash          -for running the docker container
+254) docker start conatiner_name       - to start the container
+255) docker attach container -id       - open container/view the files in container
+256) docker rmi container -id          - remove the container
+257) docker rmi -f container_id        - forcefully remove container
+258) cat /etc/os-release               - Show all information about image
+259) which jenkins                     - location of jenkins
+260) 
+    
