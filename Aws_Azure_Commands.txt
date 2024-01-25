@@ -278,5 +278,40 @@ GIT Bash
 257) docker rmi -f container_id        - forcefully remove container
 258) cat /etc/os-release               - Show all information about image
 259) which jenkins                     - location of jenkins
-260) 
-    
+260) docker run -d --name jenkins -p 8080:8080 jenkins/jenkins   - Install jenkins on docker
+261) docker stop image_id              - stop the container
+262) docker run -it --name jenkins -p 8080:8080 jenkins/jenkins    - shows password of jenkins directly 
+263) docker run -it --name cont-3 readhat/ubi8 /bin/bash           - REDHAT container
+264) docker build -t Docker-image-name      - create image
+265) sudo apt install docker-buildx-plugin   - install buildx
+266) docker ps -a | grep Exited       - stopped container
+267) docker ps -a -q                  - shows only docker id
+268) docker stop $(docker ps -a -q)   - stop the multiple container
+269) docker images -q                 - shows all images id only
+270) docker rmi $(docker images -q)   - delete all images
+271) docker inspect container-id      - shows specific container id details
+272) docker inspect container-id | grep created   - which info you want according to edit
+273) docker logs container-id          - shows logs
+274) docker login                      - login to docker hub
+275) docker push image-name            - to push the image from host to docker hub
+276) docker pull image-name            - pull image from docker hub to docker host
+277) docker logout                     - for logout
+**Docker Compose*
+278) $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+279) $ sudo chmod +x /usr/local/bin/docker-compose
+280) $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+281) $ docker-compose --version
+282) docker-compose up                  - run the application
+283) docker run -it --name cont2 --privileged=true --volumes-from cont-1 ubuntu /bin/bash  - use another container volume to create container
+284) docker run -it --name cont-3 -v /volume-2 centos /bin/bash     -docker volume cmd
+285) docker run -it --name cont-5 -v /home/ec2-user:/volume --privileged=true centos /bin/bash   - mapped location to volume
+286) docker volume ls                   - shows volumes
+287) docker volume create (volume name)  - create volume
+288) docker volume rm (volume name)      - remove volume
+289) docker volume prune                 - remove unused volume
+290) docker system prune                 - remove unused volume
+291) docker ps --format "{{.Names}}"     - shows only docker container names
+292) docker pause                        - pause container
+293) docker cp                           - copy file/folder btn container & host
+294) docker exec -it cont-name /bin/bash  - execute command on running container
+
